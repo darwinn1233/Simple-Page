@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    background-image: url(/image/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    outline: none;
+    font-family: 'Poppins', sans-serif 
+} 
+:root {
+    --color: #ff5e8e;
+    --one-color: #00ccff;
+    --two-color: #686de0;
+}
+/* Start Navigation */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+.navbar .container > h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: var(--color);
+    cursor: pointer;
+    position: relative;
+    animation-name: up-and-down;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+/* Animation Title */
+@keyframes up-and-down {
+    from {
+        top: -40px;
+        opacity: .2;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+.navbar .container .links ul{
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+    animation-name: up-and-downn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+/* Animation Links */
+@keyframes up-and-downn {
+    from {
+        top: 40px;
+        opacity: .2;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+.navbar .container .links ul li {
+    position: relative;
+}
+.navbar .container .links ul li::before {
+    content: "";
+    background: linear-gradient(45deg, red 0%, yellow 100%);
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transition: 0.4s;
+}
+.navbar .container .links ul li:hover::before {
+    width: 100%;
+    transition: 0.4s;
+}
+.navbar .container .links ul li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .container .menu {
+    display: none;
+}
+/* Mobile And Medium Screens */
+@media (max-width: 767px) {
+    .navbar .container {
+        padding: 20px;
+    }
+    .navbar .container .links{
+        display: none;
+    }
+    .navbar .container .menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 40px;
+        color: mediumorchid;
+        cursor: pointer;
+    }
+}
+/* End Navigation */
+/* Start Section */
+.section {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.section .container {
+    width: 100%;
+    height: 100%;
+    padding: 100px 35px;
+    position: relative;
+}
+.section .container h2 {
+    font-size: 40px;
+    color: yellow;
+    top: -45px;
+    position: relative;
+    display: inline-block;
+    animation-name: left-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+/* Animation Title */
+@keyframes left-animation {
+    from {
+        left: 120px;
+        opacity: .2;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+.section .container p {
+    position: relative;
+    top: -25px;
+    color: #ddd;
+    font-size: 1.2em;
+    line-height: 1.20;
+    text-transform: capitalize;
+    font-weight: 800;
+    animation-name: up-downnnn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+} 
+/* Animation Paragraphe */
+@keyframes up-downnnn {
+    from {
+        top: 60px;
+        opacity: 0.2;
+    }
+    to {
+        top: -25px;
+        opacity: 1;
+    }
+}
+.section .container a {
+    display: inline-block;
+    padding: 15px 30px ;
+    background-color: #ff5e8e;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+    animation-name: up-downnnnn;
+    animation-duration: 1.5s; 
+    animation-timing-function: linear;
+}
+/* Animation Link */
+@keyframes up-downnnnn {
+    from {
+        left: -50px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+/* Footer Icon----------- */
+.footer-icon {
+    width: 300px;
+    height: 100px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -37vh;
+    left: 10px;
+    animation-name: bottom-animation;
+    animation-duration: 2s;
+}
+/* Animation Icon */
+@keyframes bottom-animation {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+
+.footer-icon i {
+    font-size: 30px;
+    margin: 10px;
+    border: 5px solid BLACK;
+    background: #fff;
+    border-radius: 50%;
+    width: 74px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .6s;
+}
+.footer-icon i{
+    color: var(--one-color);
+    border: 3px solid var(--one-color);
+}
+.footer-icon .two{
+    color: #f0932b;
+    border: 3px solid #f0932b;
+}
+.footer-icon .three{
+    color: var(--two-color);
+    border: 3px solid var(--two-color);
+}
+.footer-icon .one:hover,
+.footer-icon .two:hover,
+.footer-icon .three:hover{
+    box-shadow: 0px 5px 20px 0px black;
+    transform: translateY(-7px);
+}
+/* Mobile Screens */
+@media (max-width: 375px) {
+    .section .container {
+        padding: 100px 20px;
+    }
+    .section .container .footer-icon {
+        bottom: -33vh;
+    }
+}
+/* Medium And Large Screens */
+@media (min-width: 767px)  {
+    .section .container {
+        padding: 20px;
+    }
+    .section .container .footer-icon {
+        bottom: -50vh;
+    }
+}
+/* End Section */
